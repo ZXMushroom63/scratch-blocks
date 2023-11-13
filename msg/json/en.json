@@ -281,5 +281,9 @@
     "NEW_BROADCAST_MESSAGE": "New message",
     "NEW_BROADCAST_MESSAGE_TITLE": "New message name:",
     "BROADCAST_MODAL_TITLE": "New Message",
-    "DEFAULT_BROADCAST_MESSAGE_NAME": "message1"
+    "DEFAULT_BROADCAST_MESSAGE_NAME": "message1",
+    "LOOKS_PREVIOUSBACKDROP_BLOCK": "previous backdrop",
+    "LOOKS_PREVIOUSCOSTUME": "previous costume",
+    "LOOKS_FORCESIZETO": "force set size to %1 %",
+    "POINT_TO_XY": "point towards x: %1 y: %2"
 }

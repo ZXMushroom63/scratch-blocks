@@ -91,6 +91,22 @@ Blockly.Blocks['sensing_touchingcolor'] = {
   }
 };
 
+Blockly.Blocks['sensing_color'] = {
+  /**
+   * Block to Report if its touching a certain Color.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.SENSING_COLOR,
+      "args0": [
+      ],
+      "category": Blockly.Categories.sensing,
+      "extensions": ["colours_sensing", "output_string"]
+    });
+  }
+};
+
 Blockly.Blocks['sensing_coloristouchingcolor'] = {
   /**
    * Block to Report if a color is touching a certain Color.

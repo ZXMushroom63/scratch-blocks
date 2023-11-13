@@ -52,6 +52,30 @@ Blockly.Blocks['operator_add'] = {
   }
 };
 
+Blockly.Blocks['operator_power'] = {
+  /**
+   * Block for adding two numbers.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_POWER,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "NUM1"
+        },
+        {
+          "type": "input_value",
+          "name": "NUM2"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_number"]
+    });
+  }
+};
+
 Blockly.Blocks['operator_subtract'] = {
   /**
    * Block for subtracting two numbers.
@@ -293,6 +317,38 @@ Blockly.Blocks['operator_not'] = {
   }
 };
 
+Blockly.Blocks['operator_true'] = {
+  /**
+   * Generic true block
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_TRUE,
+      "args0": [
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_boolean"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_false'] = {
+  /**
+   * Generic false block
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_FALSE,
+      "args0": [
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_boolean"]
+    });
+  }
+};
+
 Blockly.Blocks['operator_join'] = {
   /**
    * Block for string join operator.
@@ -311,6 +367,21 @@ Blockly.Blocks['operator_join'] = {
           "name": "STRING2"
         }
       ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_string"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_newline'] = {
+  /**
+   * Block for string join operator.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_NEWLINE,
+      "args0": [],
       "category": Blockly.Categories.operators,
       "extensions": ["colours_operators", "output_string"]
     });
@@ -385,6 +456,109 @@ Blockly.Blocks['operator_contains'] = {
   }
 };
 
+Blockly.Blocks['operator_replace'] = {
+  /**
+   * Block for _ contains _ operator
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_REPLACE,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "X"
+        },
+        {
+          "type": "input_value",
+          "name": "Y"
+        },
+        {
+          "type": "input_value",
+          "name": "STRING"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_string"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_if'] = {
+  /**
+   * Block for _ contains _ operator
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_IF,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "OPERAND",
+          "check": "Boolean"
+        },
+        {
+          "type": "input_value",
+          "name": "STRING1"
+        },
+        {
+          "type": "input_value",
+          "name": "STRING2"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_string"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_min'] = {
+  /**
+   * Block for getting the smallest of x and y
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_MIN,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "NUM1"
+        },
+        {
+          "type": "input_value",
+          "name": "NUM2"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_number"]
+    });
+  }
+};
+Blockly.Blocks['operator_max'] = {
+  /**
+   * Block for getting the largest of x and y.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_MAX,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "NUM1"
+        },
+        {
+          "type": "input_value",
+          "name": "NUM2"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_number"]
+    });
+  }
+};
 Blockly.Blocks['operator_mod'] = {
   /**
    * Block for mod two numbers.
@@ -405,6 +579,26 @@ Blockly.Blocks['operator_mod'] = {
       ],
       "category": Blockly.Categories.operators,
       "extensions": ["colours_operators", "output_number"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_hex'] = {
+  /**
+   * Block for mod two numbers.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_HEX,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "NUM"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_string"]
     });
   }
 };

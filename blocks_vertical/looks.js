@@ -280,6 +280,26 @@ Blockly.Blocks['looks_setsizeto'] = {
   }
 };
 
+Blockly.Blocks['looks_forcesizeto'] = {
+  /**
+   * Block to set size
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.LOOKS_FORCESIZETO,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "SIZE"
+        }
+      ],
+      "category": Blockly.Categories.looks,
+      "extensions": ["colours_looks", "shape_statement"]
+    });
+  }
+};
+
 Blockly.Blocks['looks_size'] = {
   /**
    * Block to report size
@@ -401,6 +421,20 @@ Blockly.Blocks['looks_nextcostume'] = {
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.LOOKS_NEXTCOSTUME,
+      "category": Blockly.Categories.looks,
+      "extensions": ["colours_looks", "shape_statement"]
+    });
+  }
+};
+
+Blockly.Blocks['looks_previouscostume'] = {
+  /**
+   * Block to switch the sprite's costume to the next one.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.LOOKS_PREVIOUSCOSTUME,
       "category": Blockly.Categories.looks,
       "extensions": ["colours_looks", "shape_statement"]
     });
@@ -584,6 +618,21 @@ Blockly.Blocks['looks_nextbackdrop'] = {
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.LOOKS_NEXTBACKDROP_BLOCK,
+      "category": Blockly.Categories.looks,
+      "extensions": ["colours_looks", "shape_statement"]
+    });
+  }
+};
+
+
+Blockly.Blocks['looks_previousbackdrop'] = {
+  /**
+   * Block to switch the backdrop to the next one.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.LOOKS_PREVIOUSBACKDROP_BLOCK,
       "category": Blockly.Categories.looks,
       "extensions": ["colours_looks", "shape_statement"]
     });

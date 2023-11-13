@@ -351,3 +351,22 @@ Blockly.Msg.NEW_BROADCAST_MESSAGE = 'New message';
 Blockly.Msg.NEW_BROADCAST_MESSAGE_TITLE = 'New message name:';
 Blockly.Msg.BROADCAST_MODAL_TITLE = 'New Message';
 Blockly.Msg.DEFAULT_BROADCAST_MESSAGE_NAME = 'message1';
+
+
+// Scratch++ Messages
+Blockly.Msg.MOTION_FENCING_ENABLE = "enable fencing"
+Blockly.Msg.MOTION_FENCING_DISABLE = "disable fencing"
+Blockly.Msg.OPERATORS_TRUE = "true"
+Blockly.Msg.OPERATORS_FALSE = "false"
+Blockly.Msg.OPERATORS_POWER = "%1 ^ %2"
+Blockly.Msg.LOOKS_PREVIOUSBACKDROP_BLOCK = 'previous backdrop';
+Blockly.Msg.LOOKS_PREVIOUSCOSTUME = 'previous costume';
+Blockly.Msg.LOOKS_FORCESIZETO = 'force set size to %1 %';
+Blockly.Msg.POINT_TO_XY = 'point towards x: %1 y: %2';
+Blockly.Msg.OPERATORS_MIN = "min %1 %2"
+Blockly.Msg.OPERATORS_MAX = "max %1 %2"
+Blockly.Msg.OPERATORS_IF = "%1 ? %2 : %3"
+Blockly.Msg.OPERATORS_REPLACE = "replace %1 with %2 in %3"
+Blockly.Msg.OPERATORS_NEWLINE = "new line"
+Blockly.Msg.OPERATORS_HEX = "%1 to hexadecimal"
+Blockly.Msg.SENSING_COLOR = "color at my position"
