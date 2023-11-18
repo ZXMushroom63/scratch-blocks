@@ -324,6 +324,35 @@ Blockly.Blocks['data_insertatlist'] = {
   }
 };
 
+Blockly.Blocks['data_setlisttosplit'] = {
+  /**
+   * Block to insert item to list.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.DATA_SETLISTTOSPLIT,
+      "args0": [
+        {
+          "type": "field_variable",
+          "name": "LIST",
+          "variableTypes": [Blockly.LIST_VARIABLE_TYPE]
+        },
+        {
+          "type": "input_value",
+          "name": "STRING"
+        },
+        {
+          "type": "input_value",
+          "name": "CHARACTER"
+        }
+      ],
+      "category": Blockly.Categories.dataLists,
+      "extensions": ["colours_data_lists", "shape_statement"]
+    });
+  }
+};
+
 Blockly.Blocks['data_replaceitemoflist'] = {
   /**
    * Block to insert item to list.
