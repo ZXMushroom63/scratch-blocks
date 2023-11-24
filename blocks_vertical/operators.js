@@ -54,12 +54,36 @@ Blockly.Blocks['operator_add'] = {
 
 Blockly.Blocks['operator_power'] = {
   /**
-   * Block for adding two numbers.
+   * Block for x^y.
    * @this Blockly.Block
    */
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.OPERATORS_POWER,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "NUM1"
+        },
+        {
+          "type": "input_value",
+          "name": "NUM2"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_number"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_fastpower'] = {
+  /**
+   * Block for x^y but fast.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_FASTPOWER,
       "args0": [
         {
           "type": "input_value",
@@ -412,6 +436,34 @@ Blockly.Blocks['operator_letter_of'] = {
   }
 };
 
+Blockly.Blocks['operator_substring'] = {
+  /**
+   * Block for "letter _ of _" operator.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_SUBSTRING,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "LETTER1"
+        },
+        {
+          "type": "input_value",
+          "name": "LETTER2"
+        },
+        {
+          "type": "input_value",
+          "name": "STRING"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_string"]
+    });
+  }
+};
+
 Blockly.Blocks['operator_length'] = {
   /**
    * Block for string length operator.
@@ -440,6 +492,54 @@ Blockly.Blocks['operator_contains'] = {
   init: function() {
     this.jsonInit({
       "message0": Blockly.Msg.OPERATORS_CONTAINS,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "STRING1"
+        },
+        {
+          "type": "input_value",
+          "name": "STRING2"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_boolean"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_startswith'] = {
+  /**
+   * Block for _ starts with _ operator
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_STARTSWITH,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "STRING1"
+        },
+        {
+          "type": "input_value",
+          "name": "STRING2"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_boolean"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_endswith'] = {
+  /**
+   * Block for _ ends with _ operator
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_ENDSWITH,
       "args0": [
         {
           "type": "input_value",
