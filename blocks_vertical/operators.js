@@ -556,6 +556,30 @@ Blockly.Blocks['operator_endswith'] = {
   }
 };
 
+Blockly.Blocks['operator_else'] = {
+  /**
+   * Block for _ ends with _ operator
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_ELSE,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "CASE"
+        },
+        {
+          "type": "input_value",
+          "name": "DEFAULT"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_string"]
+    });
+  }
+};
+
 Blockly.Blocks['operator_replace'] = {
   /**
    * Block for _ contains _ operator
@@ -675,6 +699,34 @@ Blockly.Blocks['operator_mod'] = {
         {
           "type": "input_value",
           "name": "NUM2"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_number"]
+    });
+  }
+};
+
+Blockly.Blocks['operator_clamp'] = {
+  /**
+   * Block for mod two numbers.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_CLAMP,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "VALUE"
+        },
+        {
+          "type": "input_value",
+          "name": "MIN"
+        },
+        {
+          "type": "input_value",
+          "name": "MAX"
         }
       ],
       "category": Blockly.Categories.operators,

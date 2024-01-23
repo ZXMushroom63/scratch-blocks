@@ -380,6 +380,30 @@ Blockly.Blocks['control_for_each'] = {
   }
 };
 
+Blockly.Blocks['control_launch'] = {
+  /**
+   * Block for "when I start as a clone" hat.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "id": "control_launch",
+      "message0": Blockly.Msg.CONTROL_LAUNCH,
+      "message1": "%1",
+      "args0": [
+      ],
+      "args1": [
+        {
+          "type": "input_statement",
+          "name": "SUBSTACK"
+        }
+      ],
+      "category": Blockly.Categories.control,
+      "extensions": ["colours_control", "shape_statement"]
+    });
+  }
+};
+
 Blockly.Blocks['control_start_as_clone'] = {
   /**
    * Block for "when I start as a clone" hat.
