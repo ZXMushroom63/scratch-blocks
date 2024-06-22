@@ -814,3 +814,41 @@ Blockly.Blocks['operator_mathop'] = {
     });
   }
 };
+Blockly.Blocks['operator_color'] = {
+  /**
+   * Block for "advanced" math ops on a number.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_COLOR,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "COLOR"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_string"]
+    });
+  }
+};
+Blockly.Blocks['operator_boolcast'] = {
+  /**
+   * Block for "advanced" math ops on a number.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_BOOLCAST,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "STRING"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_boolean"]
+    });
+  }
+};
