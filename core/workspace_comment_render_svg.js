@@ -306,7 +306,8 @@ Blockly.WorkspaceCommentSvg.prototype.createEditorSpp_ = function () {
     { optionName: "Optimise output JSON", defaultValue: true, id: "optimisation" },
     { optionName: "Log final extensions", defaultValue: false, id: "log_extensions" },
     { optionName: "Log final JSON", defaultValue: false, id: "log_json" },
-    { optionName: "Don't inject polyfills", defaultValue: false, id: "skip_defs" }
+    { optionName: "Don't inject polyfills", defaultValue: false, id: "skip_defs" },
+    { optionName: "Shadow block definitions", defaultValue: false, id: "shadowing" }
   ];
 
   var extractedData = {};
