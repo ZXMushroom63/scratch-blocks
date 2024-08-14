@@ -814,6 +814,31 @@ Blockly.Blocks['operator_mathop'] = {
     });
   }
 };
+
+Blockly.Blocks['operator_atan2'] = {
+  /**
+   * Block for rounding a numbers.
+   * @this Blockly.Block
+   */
+  init: function() {
+    this.jsonInit({
+      "message0": Blockly.Msg.OPERATORS_ATAN2,
+      "args0": [
+        {
+          "type": "input_value",
+          "name": "X"
+        },
+        {
+          "type": "input_value",
+          "name": "Y"
+        }
+      ],
+      "category": Blockly.Categories.operators,
+      "extensions": ["colours_operators", "output_number"]
+    });
+  }
+};
+
 Blockly.Blocks['operator_color'] = {
   /**
    * Block for "advanced" math ops on a number.
