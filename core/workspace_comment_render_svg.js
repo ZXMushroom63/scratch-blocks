@@ -112,6 +112,7 @@ Blockly.WorkspaceCommentSvg.prototype.getHeightWidth = function () {
  */
 Blockly.WorkspaceCommentSvg.prototype.renderSpp = function () {
   this.isSpp_ = true;
+  this.setMinimized(false);
   var size = { width: 400, height: 400 };
 
   // Add text area
@@ -162,7 +163,7 @@ Blockly.WorkspaceCommentSvg.prototype.renderSpp = function () {
  * @package
  */
 Blockly.WorkspaceCommentSvg.prototype.render = function () {
-  if (this.content && this.content.includes("$rt.__spp_compile_cfg__") && !this.rendered_) {
+  if (this.content && this.content.startsWith("$rt.__spp_compile_cfg__") && !this.rendered_) {
     //This is a Scratch++ config comment.
     this.renderSpp();
     return;
@@ -309,12 +310,12 @@ Blockly.WorkspaceCommentSvg.prototype.createEditorSpp_ = function () {
     { optionName: "Don't inject polyfills", defaultValue: false, id: "skip_defs" },
     { optionName: "Shadow block definitions", defaultValue: false, id: "shadowing" }
   ];
-
+  this.setText(this.content_);
   var extractedData = {};
   try {
     extractedData = JSON.parse(this.content_.split("\n")[1]);
   } catch (err) {
-
+    this.setText("$rt.__spp_compile_cfg__\n{}");
   }
 
   var table = document.createElementNS(Blockly.HTML_NS, "table");
